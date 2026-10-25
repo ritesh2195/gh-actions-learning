@@ -1,8 +1,9 @@
 name: 01 - Building Blocks
 
 on:
-  - push
-  - workflow_dispatch
+  push:
+    branches:
+      'main'
 
 jobs:
   echo-hello:
@@ -13,7 +14,7 @@ jobs:
   echo-goodbye:
     runs-on: ubuntu-latest
     steps:
-      - name: Failed step
+      - name: Succeed step
         run: |
           echo "I will succeed"
           exit 0
