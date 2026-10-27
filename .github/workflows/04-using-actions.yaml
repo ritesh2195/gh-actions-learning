@@ -8,8 +8,12 @@ jobs:
         steps:
             - name: Checkout Code
               uses: actions/checkout@v7
-            - name: Printing Folders
-              run: |
-                sudo apt-get update && sudo apt-get install -y tree
-                tree -I '.git' # Prints the structure, ignoring the hidden .git folder
+            - name: Setup Node
+              uses: actions/setup-node@v7
+              with:
+                node-version: '24.x'
+                cache: npm
+            - name: Install Dependencies
+              working-directory: 04-using-actions/react-app
+              run: npm ci
             
