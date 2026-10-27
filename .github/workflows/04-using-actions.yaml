@@ -14,6 +14,6 @@ jobs:
                 node-version: '24.x'
                 cache: npm
             - name: Install Dependencies
-              working-directory: 04-using-actions/react-app
+              working-directory: 04-using-actions\react-app
               run: npm ci
             
