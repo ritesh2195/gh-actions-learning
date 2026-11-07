@@ -44,4 +44,6 @@ jobs:
                 path: 14-artifacts/react-app/build
                 name: app
             - name: Show folder structure
-              run: echo ls -R
+              run: |
+                echo "Folder structure"
+                ls -R
